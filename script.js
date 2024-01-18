@@ -10,7 +10,7 @@ const currentPageSpan = document.getElementById('currentPage');
 let currentPage = 1;
 
 // Fetch user data
-fetch(`https://api.github.com/users/${githubUsername}`)
+ fetch(`https://api.github.com/users/${githubUsername}`)
     .then(response => response.json())
     .then(user => {
         profileImage.src = user.avatar_url || 'placeholder-image.jpg';
@@ -22,11 +22,11 @@ fetch(`https://api.github.com/users/${githubUsername}`)
         githubLinkElement.href = user.html_url;
 
         // Fetch user repositories
-        fetchUserRepositories();
+        getRepositories();
     })
     .catch(error => console.error('Error fetching user data:', error));
 
-function fetchUserRepositories() {
+/*function fetchUserRepositories() {
     const perPage = 6;
     const apiUrl = `https://api.github.com/users/${githubUsername}/repos?page=${currentPage}&per_page=${perPage}`;
 
@@ -34,6 +34,34 @@ function fetchUserRepositories() {
         .then(response => response.json())
         .then(repositories => displayRepositories(repositories))
         .catch(error => console.error('Error fetching repositories:', error));
+} */
+
+async function getRepositories() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'block'; // Show loader during API request
+
+    const username = githubUsername;
+
+    if (!username) {
+        alert('Please enter a username');
+        loader.style.display = 'none'; // Hide loader after API request
+        return;
+    }
+
+    const perPage = 6;
+    const apiUrl = `https://api.github.com/users/${username}/repos?page=${currentPage}&per_page=${perPage}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        displayRepositories(data);
+
+    } catch (error) {
+        console.error('Error fetching repositories:', error);
+    } finally {
+        loader.style.display = 'none'; // Hide loader after API request
+    }
 }
 
 function displayRepositories(repositories) {
