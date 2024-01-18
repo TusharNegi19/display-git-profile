@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="profile-section">
+                    <img src="" alt="Profile Image" id="profileImage" class="profile-image">
+                    <div class="user-info">
+                        <h3 id="username"></h3>
+                        <p id="bio"></p>
+                        <p id="location"></p>
+                        <p>Twitter: <a href="#" id="twitterLink" target="_blank"></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="githubLink-section">
+                <p><a href="#" id="githubLink" target="_blank">Visit Github Profile</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="repositories-section">
+                    <h2>Public Repositories</h2>
+                    <div id="repositories"></div>
+                    <div class="pagination">
+                        <button onclick="changePage('prev')">Previous</button>
+                        <span id="currentPage">1</span>
+                        <button onclick="changePage('next')">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.profile-section {
+    display: flex;
+    margin-bottom: 20px; /* Adjust the margin as needed for spacing */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+
+.user-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.githubLink-section {
+    margin-left: 2%;
+}
+
+
+.repo-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 48%; /* Adjust the width as needed */
+    margin-right: 2%; /* Adjust the margin as needed for spacing */
+    text-align: left; /* Align the contents to the left */
+}
+
+.repositories-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.repo-title {
+    color: #3498db;
+}
+
+.repo-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.repo-topics {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    border-radius: 20px;
+}
