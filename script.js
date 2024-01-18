@@ -1,4 +1,4 @@
-const githubUsername = "TusharNegi19";
+const githubUsername = "GeetaNegi-GN";
 const profileImage = document.getElementById('profileImage');
 const usernameElement = document.getElementById('username');
 const bioElement = document.getElementById('bio');
