@@ -19,3 +19,5 @@ This project is a simple web application that allows users to enter a GitHub use
 2. This project is hosted on Vercel.
 
 [Live Demo](https://display-git-profile.vercel.app)
+
+3. To change user profile make changes in the script.js file and paste your desired username
