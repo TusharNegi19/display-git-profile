@@ -15,3 +15,7 @@ This project is a simple web application that allows users to enter a GitHub use
 
    ```bash
    git clone https://github.com/your-username/your-repo.git
+
+2. This project is hosted on Vercel.
+
+[Live Demo](https://display-git-profile.vercel.app)
